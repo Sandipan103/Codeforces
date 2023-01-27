@@ -1,0 +1,18 @@
+# include <bits/stdc++.h>
+using namespace std;
+ 
+int sandipan(int n) {
+    if(n == 0)  
+        return 0;
+    else if(n <= 5) 
+        return 1;
+    else return 1 + sandipan(n - 5);
+}
+ 
+int main()  {
+    int n;
+    cin >> n;
+    int ans = sandipan(n);
+    cout << ans;
+    return 0;
+}
