@@ -1,0 +1,34 @@
+# include <iostream>
+using namespace std;
+ 
+int main()  {
+    int n;
+    cin >> n;
+    string s, ans;
+    cin >> s;
+ 
+    int t = (n - 11) / 2, d1 = 0, d2 = 0;
+ 
+    for(int i=0; i<s.length(); i++)  {
+        if(s[i] == '8') {
+            s.erase(i, 1);
+            i--;
+            d1++;
+        }
+        if(d1 >= t) break;
+    }
+ 
+    for(int i=0; i<s.length(); i++)  {
+        if(s[i] != '8') {
+            s.erase(i, 1);
+            i--;
+            d2++;
+        }
+        if(d2 >= t) break;
+    }
+    if(s[0] == '8')   
+        cout << "YES" << endl;
+    else
+        cout << "NO" << endl;
+ 
+    re
