@@ -1,0 +1,15 @@
+# include <bits/stdc++.h>
+using namespace std;
+ 
+int main()  {
+    long long k, n, w, sum, ans;
+    cin >> k >> n >> w;
+ 
+    sum = (w * (w + 1)) / 2;
+    ans = (sum * k) - n;
+    if(ans < 0) 
+        cout << 0;
+    else
+        cout << ans;
+    return 0;
+}
