@@ -1,0 +1,25 @@
+# include <bits/stdc++.h>
+using namespace std;
+ 
+int main()  {
+ 
+    int x = 0, n;
+    string a = "++X", b = "X++";
+    cin >> n;
+    vector<string> v;
+    for(int i=0; i<n; i++)  {
+        string temp;
+        cin >> temp;
+        v.push_back(temp);
+    }
+ 
+    for(int i=0; i<n; i++)  {
+        if(v[i] == a || v[i] == b)
+            x = x + 1;
+        else
+            x = x - 1;
+    }
+ 
+    cout << x;
+    return 0;
+}
