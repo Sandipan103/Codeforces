@@ -1,0 +1,16 @@
+# include <bits/stdc++.h>
+using namespace std;
+ 
+int main()  {
+    int n = 0, cnt = 0;
+    string str;
+    cin >> n >> str;
+    int i = 1;
+    while(i < n)    {
+        if(str[i] == str[i - 1])
+        cnt++;
+        i++;
+    }
+    cout << cnt;
+    return 0;
+}
